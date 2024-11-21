@@ -1,0 +1,236 @@
+:root{
+    --main-color:#1C1C1C;
+    --color-1:#F7F7F7;
+}
+.bg-main{
+    background-color: var(--main-color);
+}
+.bg-two{
+    background-color: var(--color-1);
+}
+.text-main{
+    color: var(--main-color);
+}
+.Montserrat{
+    font-family: "Montserrat", sans-serif;
+}
+.poppins{
+    font-family: "Poppins", sans-serif;
+}
+.transition{
+    transition: 0.3s;
+}
+.w-90{
+    width: 90% !important;
+}
+/* navbar */
+nav.navbar .navbar-nav > li > a {
+    font-size: 14px;
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+nav.navbar  .navbar-toggler span{
+    background-image: none;
+}
+nav.navbar .active::before{
+    width: calc(100% - 16px);
+}
+ .nav-link::before{
+    content: "";
+    position: absolute;
+    width:  0;
+    height: 2px;
+    background-color: #000;
+    transition: 0.3s;
+    bottom: 3px;
+}
+@media (max-width: 768px) {
+    nav.navbar .container-fluid .active::before{
+        width: 100%;
+    }
+     .nav-item{
+        padding: 5px 0px;
+    } 
+}
+nav.navbar .container-fluid .navbar-nav .nav-link{
+    width: fit-content;
+}
+/* section home */
+section#home{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../images/bg.jpg);
+    background-position: 0px 0px;
+    background-size: cover;
+}
+/* section about */
+#about .img::before{
+    content: "";
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    background-image: url(../images/dots.png);
+    background-repeat: repeat;
+    
+    bottom: -30px;
+    left: -30px;
+    z-index: -1;
+}
+.progress{
+    height: 25px;
+}
+#about button.black:hover{
+    background-color: #fff !important;  
+    border-color: #000 !important;
+}
+#about button.black:hover a{
+    color: #000 !important;
+}
+#about button.white:hover{
+    background-color: #000 !important;  
+    border-color: #fff !important;
+}
+#about button.white:hover a{
+    color: #fff !important;
+}
+/* section services */
+#services div .row div p{
+    font-size: 14px;
+}
+#services div .row div div:hover i{
+    background-color: var(--main-color);
+    color: #fff;
+}
+#services div h2 span::before,
+#works div h2 span::before,
+#clients div h2 span::before,
+#team div h2 span::before,
+#contact div h2 span::before{
+    content: "";
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    background-image: url(../images/dots.png);
+    bottom: -5px;
+    z-index: -1;
+}
+/* section protfolio */
+.row .item-content{
+    background-color: #fdfdfd;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: 0.5s;
+}
+.zoom i:hover,
+.links i:hover{
+    background-color: #fff !important;
+    color: #212529 !important;
+}
+.row div div:hover .item-content{
+    transform: translateY(0px);
+    opacity: 1 !important;
+}
+.item-content h6,.item-content .zoom{
+    transition: 0.5s;
+}
+.row div div:hover .item-content h6{
+    margin-bottom: 7px !important;
+}
+.row div div:hover .item-content .zoom{
+    margin-top: 7px !important;
+}
+.nav-tabs .nav-link::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--main-color);
+}
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover{
+    color: var(--main-color);
+}
+.nav-tabs .nav-link.active::before{
+    width: 100%;
+}
+/* secion cleints */
+.carousel-indicators{
+    bottom: -70px;
+}
+.carousel-indicators [data-bs-target]{
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+}
+.carousel-indicators [data-bs-target]:hover,.carousel-indicators [data-bs-target].active{
+    background-color: #869791;
+}
+.carousel-item img{
+    width: 100px;   
+}
+.carousel-item span{
+    font-size: 12px;
+}
+/* section team */
+#team div .row .card .card-body{
+    background-color: #5B5B5B;
+}
+#team div .row .card img{
+    transition: 0.7s;
+}
+#team div .row .card .image:hover img{
+    transform: scale(1.2);
+}
+#team div .card .links{
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    background-color: #FAF3F3;
+    transform:  scale(0.5);
+    transition: 0.7s;
+    opacity: 0;
+}
+#team div .card:hover .links{
+    transform: scale(1) rotatey(360deg);
+    opacity: 1;
+}
+/* section contact */
+#contact div .row .one i{
+    background-color: #eee;
+}
+#contact div .row .one:hover i{
+    background-color: var(--main-color);
+    color: #fff;
+}
+/* section contact */
+:focus-visible{
+    outline: none;
+}
+#contact div form input,
+#contact div form textarea{
+    background-color: #F4F4F4;
+}
+#contact div form textarea{
+    max-height: 200px;
+    height: 150px;
+}
+form button:hover{
+    background-color: #fff !important;
+}
+form button:hover a{
+    color: #000 !important;
+}
+/* footer */
+footer > p, #about button a{
+    font-size: 0.8125rem;
+}
+@media (min-width: 1200px) {
+    nav > div,
+    section > div{
+        padding-left: 100px !important;
+        padding-right: 100px !important;
+    }
+  }
